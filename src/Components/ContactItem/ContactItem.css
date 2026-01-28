@@ -1,0 +1,125 @@
+.contact-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.contact-item-container {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* WhatsApp padding structure */
+    height: 72px;
+    /* Standard WhatsApp contact item height */
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.contact-item-container:hover {
+    background-color: #f5f6f6;
+}
+
+.contact-item-avatar {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 13px;
+    /* Adjusted spacing */
+    flex-shrink: 0;
+}
+
+.contact-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #f0f2f5;
+    /* Separator lines inside content area */
+    height: 100%;
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+/* Remove border for last item if feasible, or handle via parent */
+/* .contact-item-details:last-child { border-bottom: none; } */
+
+.contact-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: normal;
+    margin-bottom: 3px;
+}
+
+.contact-item-name {
+    font-size: 17px;
+    font-weight: 400;
+    color: #111b21;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contact-item-date {
+    font-size: 12px;
+    color: #667781;
+    margin-left: 6px;
+    flex-shrink: 0;
+}
+
+.contact-item-subheader {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #667781;
+    line-height: 20px;
+    min-height: 20px;
+}
+
+.contact-item-status {
+    margin-right: 4px;
+    font-size: 16px;
+    /* Icon size */
+    display: flex;
+    align-items: center;
+}
+
+.contact-item-message {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #667781;
+}
+
+
+/* Dark Mode */
+.dark-mode .contact-item-link {
+    color: inherit;
+}
+
+.dark-mode .contact-item-container {
+    background-color: #111b21;
+}
+
+.dark-mode .contact-item-details {
+    border-bottom: 1px solid #202c33;
+}
+
+.dark-mode .contact-item-container:hover {
+    background-color: #202c33;
+}
+
+.dark-mode .contact-item-name {
+    color: #e9edef;
+}
+
+.dark-mode .contact-item-date,
+.dark-mode .contact-item-subheader,
+.dark-mode .contact-item-message {
+    color: #8696a0;
+}

@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.contact-message-screen-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: #111b21;
+    overflow: hidden;
+}
+
+.home-screen-content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-message-screen-wrapper .sidebar-container {
+    display: none;
+    /* Hidden on mobile in chat view */
+    flex: 1;
+    background-color: #ffffff;
+    overflow-y: auto;
+    border-right: 1px solid #e9edef;
+    max-width: 100%;
+}
+
+.home-screen-content-menu {
+    display: none;
+    /* Hidden on mobile */
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 64px;
+    height: 100%;
+    padding: 0;
+    background-color: #f0f2f5;
+    box-sizing: border-box;
+    cursor: default;
+    border-right: 1px solid #d1d7db
+}
+
+.home-screen-content-menu-icons-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    gap: 24px;
+    box-sizing: border-box;
+    cursor: default;
+    flex: 1;
+}
+
+.home-screen-content-menu-icon-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    gap: 24px;
+    box-sizing: border-box;
+    cursor: default;
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.chat-screen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    /* Full width on mobile */
+    background-color: #efeae2;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+/* ... keep header/body styles ... */
+.chat-header {
+    height: 60px;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+/* Back button style - initially visible on mobile */
+.button-back {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #54656f;
+}
+
+.chat-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.chat-header .chat-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 8px;
+    flex: 1;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #111b21;
+    font-weight: 500;
+}
+
+.chat-header span {
+    font-size: 13px;
+    color: #667781;
+    margin-top: 2px;
+}
+
+.chat-body {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+}
+
+
+/* Style overrides for common elements if they are just divs */
+.chat-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: rgba(11, 20, 26, 0.2);
+}
+
+.chat-content-span-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    gap: 24px;
+    box-sizing: border-box;
+    cursor: default;
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.chat-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    gap: 24px;
+    box-sizing: border-box;
+    cursor: default;
+    border-bottom: none;
+    padding-top: 8px;
+}
+
+.div-span-content-call {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    box-sizing: border-box;
+    cursor: default;
+    border-bottom: none;
+    gap: 4px;
+}
+
+.chat-options span {
+    color: #0a0a0a;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.span-content {
+    color: #0a0a0a;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.div-span-content-call:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    padding: 8px;
+}
+
+.span-content:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 8px;
+}
+
+.font-size-i {
+    font-size: 20px;
+}
+
+.bi-caret-down-fill {
+    font-size: 10px;
+}
+
+
+@media (min-width: 900px) {
+    .contact-message-screen-wrapper {
+        flex-direction: row;
+        background-color: #f0f2f5;
+        position: relative;
+    }
+
+    .contact-message-screen-wrapper::after {
+        display: none;
+    }
+
+    .home-screen-content {
+        z-index: 1;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+        background-color: #fff;
+        overflow: hidden;
+    }
+
+    .home-screen-content-menu {
+        display: flex;
+    }
+
+    .contact-message-screen-wrapper .sidebar-container {
+        display: block;
+        width: 400px;
+        flex: none;
+    }
+
+    .chat-screen {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 1;
+        background-color: #f0f2f5;
+        font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+        color: #111b21;
+    }
+
+    /* Hide back button on desktop */
+    .button-back {
+        display: none;
+    }
+}
