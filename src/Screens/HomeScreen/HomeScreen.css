@@ -26,7 +26,7 @@
     position: relative;
 }
 
-.home-screen-content-menu {
+.home-screen .home-screen-content-menu {
     display: flex;
     /* Visible on mobile */
     align-items: center;
@@ -37,7 +37,8 @@
     height: 60px;
     /* Fixed height for bottom bar */
     padding: 0;
-    background-color: #f0f2f5;
+    background-color: #ffffff;
+    /* White background like WhatsApp mobile */
     box-sizing: border-box;
     cursor: default;
     border-right: none;
@@ -45,6 +46,8 @@
     position: fixed;
     bottom: 0;
     z-index: 1000;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
 }
 
 .home-screen h1 {
@@ -67,6 +70,8 @@
     max-width: 100%;
     width: 100%;
     /* Full width on mobile */
+    padding-bottom: 60px;
+    /* Space for bottom navigation */
 }
 
 /* Placeholder hidden on mobile */
@@ -107,45 +112,8 @@
     cursor: pointer;
 }
 
-/* Desktop styles */
-@media (min-width: 900px) {
-    .home-screen-content-menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 64px;
-        height: 100%;
-        border-right: 1px solid #d1d7db;
-        border-top: none;
-        position: static;
-    }
 
-    .home-screen-content-menu-icons-social {
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        justify-content: flex-start;
-        padding: 20px 0;
-        gap: 24px;
-    }
-
-    .home-screen-content-menu-icon-settings {
-        display: flex;
-        /* Show settings on desktop */
-    }
-
-    .home-screen .sidebar-container {
-        width: 400px;
-        /* Fixed width sidebar on desktop */
-        flex: none;
-    }
-
-    .placeholder-chat {
-        display: flex;
-    }
-}
-
-.home-screen-content-menu-icons-social {
+.home-screen .home-screen-content-menu-icons-social {
     display: flex;
     flex-direction: row;
     /* Row for mobile */
@@ -154,14 +122,15 @@
     /* Distribute icons */
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: 0 10px;
+    /* Slight padding */
     gap: 0;
     box-sizing: border-box;
     cursor: default;
     flex: 1;
 }
 
-.home-screen-content-menu-icon-settings {
+.home-screen .home-screen-content-menu-icon-settings {
     display: none;
     /* Hidden on mobile */
     flex-direction: column;
@@ -177,7 +146,7 @@
     margin-bottom: 10px;
 }
 
-.home-screen-content-menu span {
+.home-screen .home-screen-content-menu span {
     color: #636261;
     cursor: pointer;
     border-radius: 50%;
@@ -187,7 +156,54 @@
     transition: background-color 0.2s;
 }
 
-.home-screen-content-menu span:hover {
+.home-screen .home-screen-content-menu span:hover {
     background-color: rgba(0, 0, 0, 0.1);
     padding: 8px;
+}
+
+/* Desktop styles */
+@media (min-width: 900px) {
+    .home-screen .home-screen-content-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Explicitly restore */
+        justify-content: space-between;
+        width: 64px;
+        height: 100%;
+        padding: 0;
+        /* Explicitly restore */
+        background-color: #f0f2f5;
+        border-right: 1px solid #d1d7db;
+        border-top: none;
+        position: static;
+        box-shadow: none;
+        z-index: auto;
+    }
+
+    .home-screen .home-screen-content-menu-icons-social {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        padding: 20px 0;
+        gap: 24px;
+    }
+
+    .home-screen .home-screen-content-menu-icon-settings {
+        display: flex;
+        /* Show settings on desktop */
+    }
+
+    .home-screen .sidebar-container {
+        width: 400px;
+        /* Fixed width sidebar on desktop */
+        flex: none;
+        padding-bottom: 0;
+        /* Remove mobile padding */
+    }
+
+    .placeholder-chat {
+        display: flex;
+    }
 }
