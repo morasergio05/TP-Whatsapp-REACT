@@ -43,6 +43,8 @@
     /* Space between text and time */
     white-space: pre-wrap;
     word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .message-time {
@@ -56,7 +58,7 @@
     /* Adjust alignment */
 }
 
-.message-time i{
+.message-time i {
     margin-right: 4px;
     font-size: 16px;
     /* Icon size */
