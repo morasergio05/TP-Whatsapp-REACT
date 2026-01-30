@@ -97,9 +97,11 @@
 
 /* Back button style - initially visible on mobile */
 .button-back {
+    
     border: none;
     background: transparent;
     cursor: pointer;
+    margin-left: -8px;
     margin-right: 10px;
     display: flex;
     align-items: center;
@@ -123,12 +125,25 @@
     padding-top: 20px;
     flex: 1;
 }
+.chat-info span {
+    display: flex;
+    align-items: flex-start;
+    font-size: 10px;
+    flex-direction: column;
+    justify-content: left;
+    padding-top: 2px;
+    
+    margin-bottom: 12px;
+    flex: 1;
+}
 
 .chat-header h3 {
     margin: 0;
     font-size: 16px;
     color: #111b21;
     font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: -5px;
 }
 
 .chat-header span {
@@ -176,11 +191,12 @@
     align-items: center;
     justify-content: space-between;
     height: auto;
-    gap: 24px;
+    gap: 15px;
     box-sizing: border-box;
     cursor: default;
     border-bottom: none;
     padding-top: 8px;
+    margin-right: -10px;
 }
 
 .div-span-content-call {
@@ -282,4 +298,5 @@
     .button-back {
         display: none;
     }
+    
 }

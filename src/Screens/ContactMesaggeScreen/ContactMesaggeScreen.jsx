@@ -53,7 +53,7 @@ export default function ContactMesaggeScreen() {
                         <div className="chat-content-span-options">
                             <div className="chat-info">
                                 <h3>{contactSelected.contact_name}</h3>
-                                <span>en línea hoy a las {contactSelected.last_time_online}</span>
+                                <span>últ. vez hoy a la(s) {contactSelected.last_time_online}</span>
                             </div>
                             <div className="chat-options">
                                 <div className="div-span-content-call" title="Llamar">
