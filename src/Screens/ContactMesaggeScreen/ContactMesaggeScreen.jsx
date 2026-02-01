@@ -7,6 +7,7 @@ import { ContactDetailContext } from '../../Contexts/ContactDetailContext';
 import { ContactContexts } from '../../Contexts/ContactContexts';
 import NewMessageForm from '../../Components/NewMessagesForm/NewMessageForm';
 import ContactSidebar from '../../Components/ContactSidebar/ContactSidebar';
+import AsideMenu from '../../Components/AsideMenu/AsideMenu';
 /* contact_id: 1,
         contact_name: 'Laura',
         contact_avatar: 'https://www.seoptimer.com/storage/images/2014/08/no-con-la-mascota.jpg',
@@ -27,19 +28,7 @@ export default function ContactMesaggeScreen() {
     return (
         <div className="contact-message-screen-wrapper">
             <div className="home-screen-content">
-                <aside className='home-screen-content-menu'>
-                    <div className='home-screen-content-menu-icons-social'>
-                        <span className='span-content-icon-chat'><i className="bi bi-chat-right-text-fill"></i></span>
-                        <span className='span-content-icon-status'><i className="bi bi-plus-circle"></i></span>
-                        <span className='span-content-icon-diffusion'><i className="bi bi-chat-dots"></i></span>
-                        <span className='span-content-icon-comunity'><i className="bi bi-people"></i></span>
-                    </div>
-                    <div className='home-screen-content-menu-icon-settings'>
-                        <span className='span-content-icon-gallery'><i className="bi bi-images"></i></span>
-                        <span className='span-content-icon-settings'><i className="bi bi-gear"></i></span>
-                        <span className='span-content-icon-profile'><i className="bi bi-person"></i></span>
-                    </div>
-                </aside>
+                <AsideMenu />
                 <div className="sidebar-container">
 
                     <ContactSidebar />
@@ -57,10 +46,11 @@ export default function ContactMesaggeScreen() {
                             </div>
                             <div className="chat-options">
                                 <div className="div-span-content-call" title="Llamar">
-                                    <span><i class="bi bi-camera-video font-size-i"></i></span>
-                                    <span><i class="bi bi-caret-down-fill"></i></span>
+                                    <span><i className="bi bi-camera-video font-size-i"></i></span>
+                                    <span className="icon-caret"><i className="bi bi-caret-down-fill"></i></span>
                                 </div>
-                                <span className="span-content"><i class="bi bi-search font-size-i" title="Buscar"></i></span>
+                                <span className="span-content" title="Llamada"><i className="bi bi-telephone font-size-i"></i></span>
+                                <span className="span-content" title="Buscar"><i className="bi bi-search font-size-i"></i></span>
                                 <span className="span-content"><i className="bi bi-three-dots-vertical font-size-i" title="Menú"></i></span>
                             </div>
 
@@ -72,8 +62,8 @@ export default function ContactMesaggeScreen() {
                         <NewMessageForm />
                     </div>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
 
     )
 }
